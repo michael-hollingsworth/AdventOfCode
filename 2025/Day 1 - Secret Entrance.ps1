@@ -1,4 +1,4 @@
-function Get-ZerosInSequence {
+function Get-AoC2025Day1Answer {
     [CmdletBinding()]
     param (
         [ValidateNotNullOrEmpty()]
@@ -51,13 +51,13 @@ function Get-ZerosInSequence {
         $currentValue = $newValue
     }
 
-    return ([PSCustomObject]@{
-        Zeros = $zerosCount
-        PassedZero = $passedZero
-    })
+    return [PSCustomObject]@{
+        'Part 1' = $zerosCount
+        'Part 2' = $passedZero
+    }
 }
 
-[String[]]$testSequence = '
+[String[]]$sampleInput = '
 L68
 L30
 R48
@@ -69,7 +69,7 @@ L99
 R14
 L82' -split "`n"
 
-[String[]]$sequence = '
+[String[]]$challengeInput = '
 L45
 R35
 R42
@@ -4169,5 +4169,3 @@ L39
 R13
 L7
 L35' -split "`n"
-
-Get-ZerosInSequence -InputObject $sequence

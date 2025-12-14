@@ -23,7 +23,6 @@ function Get-AoC2025Day3Answer {
                 continue
             }
 
-
             if ($indexOf -eq ($row.Length -1)) {
                 continue
             }
